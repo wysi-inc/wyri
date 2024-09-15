@@ -8,14 +8,9 @@
         "webRequestBlocking",
         "*://osu.ppy.sh/*"
     ],
-    "content_scripts": [
-        {
-            "matches": [
-                "*://osu.ppy.sh/*"
-            ],
-            "js": [
-                "firefox.js"
-            ]
-        }
-    ]
+    "background": {
+        "scripts": [
+            "redirect.js"
+        ]
+    }
 }

@@ -1,14 +1,23 @@
 {
     "manifest_version": 3,
     "name": "Wyri",
-    "description": "When You Redirect It redirects osu.ppy.sh requests to wysi727.com",
+    "description": "Redirects osu.ppy.sh requests to wysi727.com",
     "version": "1.0",
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
-        "*://osu.ppy.sh/*"
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
     ],
     "host_permissions": [
+        "http://osu.ppy.sh/*",
         "https://osu.ppy.sh/*"
-    ]
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
 }

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "regexSubstitution": "https://wysi727.com"
+            }
+        },
+        "condition": {
+            "regexFilter": "^https://osu\\.ppy\\.sh(/rankings|/users|/beatmapsets|/beatmaps)(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
+        }
+    }
+]
