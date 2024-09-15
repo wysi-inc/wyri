@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Wyri",
+    "description": "When You Redirect It redirects osu.ppy.sh requests to wysi727.com",
+    "version": "1.0",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://osu.ppy.sh/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://osu.ppy.sh/*"
+            ],
+            "js": [
+                "firefox.js"
+            ]
+        }
+    ]
+}
