@@ -2,6 +2,15 @@
     "manifest_version": 2,
     "name": "Wyri",
     "description": "When You Redirect It redirects osu.ppy.sh requests to wysi727.com",
+    "icons": {
+        "16": "icon-16.ico",
+        "24": "icon-24.ico",
+        "32": "icon-32.ico",
+        "48": "icon-48.ico",
+        "64": "icon-64.ico",
+        "96": "icon-96.ico",
+        "128": "icon-128.ico"
+    },
     "version": "1.0",
     "permissions": [
         "webRequest",
