@@ -1,3 +1,15 @@
+let isEnabled = true;
+
+browser.browserAction.onClicked.addListener(function() {
+    isEnabled = !isEnabled;
+    updateIcon();
+});
+
+function updateIcon() {
+    const iconPath = isEnabled ? 'icons/icon-32.ico' : 'icons/icon-disabled-32.ico';
+    browser.browserAction.setIcon({ path: iconPath });
+}
+
 browser.webRequest.onBeforeRequest.addListener(
     redirect,
     {
@@ -32,6 +44,7 @@ const supported_routes = [
     "/users",
     "/beatmapsets",
     "/beatmaps",
+    "/scores"
 ];
 
 function isValid(url) {
@@ -52,6 +65,10 @@ function isValid(url) {
 }
 
 function redirect(req) {
+
+    alert("i exist");
+
+    if (!isEnabled) return;
 
     const url = req.url;
 
